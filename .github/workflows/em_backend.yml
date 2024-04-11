@@ -110,7 +110,9 @@ jobs:
       - name: Login to Azure
         uses: azure/login@v1
         with:
-          creds: ${{ secrets.AZURE_CREDENTIALS }}
+          client-id: ${{ secrets.AZUREAPPSERVICE_CLIENTID_CA3A911795EB4944B6364C6831DF5816 }}
+          tenant-id: ${{ secrets.AZUREAPPSERVICE_TENANTID_37861DC9B27B4DA38F84C19439A0BA7F }}
+          subscription-id: ${{ secrets.AZUREAPPSERVICE_SUBSCRIPTIONID_C51A5D8166564928921B77C2833A6D26 }}
 
       - name: "Run Azure CLI commands"
         run: |
